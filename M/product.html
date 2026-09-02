@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meddytech International - Smart Agricultural Solutions</title>
+  <style>
+    :root {
+      --primary: #1b4332;
+      --secondary: #2d6a4f;
+      --accent: #d8f3dc;
+      --text: #2b2d42;
+      --light: #f8f9fa;
+    }
+
+    /* Enable smooth scrolling across the page */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; 
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: var(--text);
+      background-color: var(--light);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      background-color: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+    }
+
+    /* Page Sections */
+    .page {
+      display: block;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem 2rem;
+      min-height: 60vh;
+      text-align: center;
+    }
+
+    /* Hero Banner (Home Page) */
+    .hero {
+      background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(45, 106, 79, 0.8)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80') center/cover;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Grid Layout for Products & Services */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--secondary);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      width: 75%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: var(--secondary);
+      margin-top: 0.5rem;
+    }
+
+    /* Contact Form & Info */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Meddytech International</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active" id="link-home">Home</a></li>
+        <li><a href="#products" id="link-products">Products</a></li>
+        <li><a href="#services" id="link-services">Services</a></li>
+        <li><a href="#contact" id="link-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="page">
+    <div class="hero">
+      <h1>Welcome to Meddytech International</h1>
+      <p>Bridging technology and sustainable agriculture for high-yield farming.</p>
+    </div>
+    <h2>About Us</h2>
+    <p>Meddytech International is a modern agricultural enterprise dedicated to enhancing crop yields and livestock production through innovative practices and advanced technology. We combine sustainable farming methods with modern tools to provide top-quality produce, livestock, and agricultural solutions across the globe.</p>
+  </section>
+
+  <section id="products" class="page">
+    <h2>Our Livestock & Products</h2>
+    <p>Healthy, high-quality livestock breeds and organic animal feeds for optimal production.</p>
+    <div class="grid">
+      <div class="card">
+        <img src="m/p2.jpg" alt="Breeding Pigs">
+        <h3>High-Breed pigs & piglets</h3>
+        <p>Healthy, fast-growing breeding pigs and piglets raised in hygienic and monitored farm conditions.</p>
+        <p class="price">UGX 100000 / piglet</p>
+      </div>
+      <div class="card">
+        <img src="m/p3.jpg" alt="Breeding Pigs">
+        <h3>High-Breed Pigs & Piglets</h3>
+        <p>Healthy, fast-growing breeding pigs and piglets raised in hygienic and monitored farm conditions.</p>
+        <p class="price">UGX 100000 / piglet</p>
+      </div>
+      <div class="card">
+        <img src="m/piga.jpg" alt="Breeding Pigs">
+        <h3>High-Breed Pigs & Piglets</h3>
+        <p>Healthy, fast-growing breeding pigs and piglets raised in hygienic and monitored farm conditions.</p>
+        <p class="price">UGX 100000 / piglet</p>
+      </div>
+      <div class="card">
+        <img src="m/pigb.jpg" alt="Breeding Pigs">
+        <h3>High-Breed Pigs & Piglets</h3>
+        <p>Healthy, fast-growing breeding pigs and piglets raised in hygienic and monitored farm conditions.</p>
+        <p class="price">UGX 100000 / piglet</p>
+      </div>
+      <div class="card">
+        <img src="m/pigd.jpg" alt="Dairy & Beef Cattle">
+        <h3>High-Breed Pigs & Piglets</h3>
+         <p>Healthy, fast-growing breeding pigs and piglets raised in hygienic and monitored farm conditions.</p>
+        <p class="price">UGX 100000 / piglet</p>
+      </div>
+      <div class="card">
+        <img src="m/pige.jpg" alt="Poultry Chicks">
+       <h3>High-Breed Pigs & Piglets</h3>
+        <p>Quality cattle breeds trained for high milk yields and superior beef production.</p>
+        <p class="price">UGX 100000 / piglet</p>
+      </div>
+      <div class="card">
+        <img src="m/chicken3.jpg" alt="Poultry Chicks">
+        <h3>Poultry & Layers</h3>
+        <p>Day-old chicks and fully vaccinated laying hens for commercial egg and meat farming.</p>
+        <p class="price">UGX 5000 / chick</p>
+      </div>
+      <div class="card">
+        <img src="m/chicken4.png" alt="Poultry Chicks">
+        <h3>Poultry & Layers</h3>
+        <p>Day-old chicks and fully vaccinated laying hens for commercial egg and meat farming.</p>
+        <p class="price">UGX 5000 / chick</p>
+      </div>
+      <div class="card">
+        <img src="m/chicken3.jpg" alt="Poultry Chicks">
+        <h3>Poultry & Layers</h3>
+        <p>Day-old chicks and fully vaccinated laying hens for commercial egg and meat farming.</p>
+        <p class="price">UGX 5000 / chick</p>
+      </div>
+      <div class="card">
+        <img src="m/chicken12.jpg" alt="Poultry Chicks">
+        <h3>Poultry & Layers</h3>
+        <p>Day-old chicks and fully vaccinated laying hens for commercial egg and meat farming.</p>
+        <p class="price">UGX 5000 / chick</p>
+      </div>
+      <div class="card">
+        <img src="m/chicken10.jpg" alt="Poultry Chicks">
+        <h3>Poultry & Layers</h3>
+        <p>Day-old chicks and fully vaccinated laying hens for commercial egg and meat farming.</p>
+        <p class="price">UGX 5000 / chick</p>
+      </div>
+      <div class="card">
+        <img src="m/chicken1.jpg" alt="Poultry Chicks">
+        <h3>Poultry & Layers</h3>
+        <p>Day-old chicks and fully vaccinated laying hens for commercial egg and meat farming.</p>
+        <p class="price">UGX 5000 / chick</p>
+      </div>
+      <div class="card">
+        <img src="m/goat1.jpg" alt="Sheep & Goats">
+        <h3>Organic Goats</h3>
+        <p>Hardy, disease-resistant livestock ideal for breeding, dairy, or meat production.</p>
+        <p class="price">UGX 100000 / head</p>
+      </div>
+      <div class="card">
+        <img src="m/goat10.jpg" alt="Sheep & Goats">
+        <h3>Organic Goats </h3>
+        <p>Hardy, disease-resistant livestock ideal for breeding, dairy, or meat production.</p>
+        <p class="price">UGX 70000 / head</p>
+      </div>
+      <div class="card">
+        <img src="m/goat11.jpg" alt="Sheep & Goats">
+        <h3>Organic Goats</h3>
+        <p>Hardy, disease-resistant livestock ideal for breeding, dairy, or meat production.</p>
+        <p class="price">UGX 80000 / head</p>
+      </div>
+      <div class="card">
+        <img src="m/goat2 - Copy.jpg" alt="Sheep & Goats">
+        <h3>Organic Goats </h3>
+        <p>Hardy, disease-resistant livestock ideal for breeding, dairy, or meat production.</p>
+        <p class="price">UGX 70000 / head</p>
+      </div>
+      <div class="card">
+        <img src="m/goat3.jpg" alt="Sheep & Goats">
+        <h3>Organic Goats </h3>
+        <p>Hardy, disease-resistant livestock ideal for breeding, dairy, or meat production.</p>
+        <p class="price">UGX 80000 / head</p>
+      </div>
+      <div class="card">
+        <img src="m/goat4 - Copy.jpg" alt="Sheep & Goats">
+        <h3>Organic Goats </h3>
+        <p>Hardy, disease-resistant livestock ideal for breeding, dairy, or meat production.</p>
+        <p class="price">UGX 60000 / head</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="page">
+    <h2>Our Professional Services</h2>
+    <p>Expert guidance and tech solutions tailored to your agricultural needs.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Soil Testing & Analysis</h3>
+        <p>Comprehensive soil sampling and laboratory testing to optimize crop selection and fertilization schedules.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Irrigation Installation</h3>
+        <p>End-to-end setup of automated drip and sprinkler systems to minimize water waste and boost efficiency.</p>
+      </div>
+      <div class="card">
+        <h3>Farm Management Consulting</h3>
+        <p>Strategic planning, yield forecasting, and operational guidance from our experienced agronomists.</p>
+      </div>
+      <div class="card">
+        <h3>web development</h3>
+        <p>custom, responsive websitedesign and development tailored to showwcase your services, streamline clinet communication, and drive busssiness growth.</p>
+      </div>
+      <div class="card">
+        <h3>computer maintenance & repair</h3>
+        <p>comprehencive hardware diagonostics, software troubleshooting, routine tune-ups, and reliable repair services to keep your systems running at peak performances.</p>
+      </div>
+      <div class="card">
+        <h3>general computing</h3>
+        <p>reliable support for dailly computer operations, operating system configuration, essential software setup, and basic digital troubleshooting</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="page">
+    <h2>Contact Us</h2>
+    <p>Get in touch with the team at Meddytech International.</p>
+    <div class="contact-container">
+      <div>
+        <div class="card">
+          <h3>Contact Details</h3>
+          <p><strong>Address:</strong> accd101 amolatar</p>
+          <p><strong>Phone:</strong> + 256 (760512381)</p>
+          <p><strong>Email:</strong> dorcusojungu@gmail.com</p>
+          <p><strong>Hours:</strong> Mon - Sat: 8:00 AM - 5:00 PM</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form onsubmit="event.preventDefault(); alert('Message sent!');">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Meddytech International. All rights reserved.</p>
+    come one come all!!!
+  </footer>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => link.classList.remove('active'));
+          document.getElementById('link-' + id).classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    pages.forEach(page => observer.observe(page));
+  </script>
+</body>
+</html>
